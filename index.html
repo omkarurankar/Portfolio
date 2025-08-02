@@ -1,163 +1,17 @@
-.profile-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 6px solid #58a6ff;
-      box-shadow: 0 0 25px #58a6ff;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      color: #58a6ff;
-      font-weight: 600;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: #ccc;
-      margin-top: 0.7rem;
-    }
-
-    nav {
-      margin: 2rem 0 3rem;
-    }
-
-    nav a {
-      color: #58a6ff;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 500;
-      font-size: 1.05rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2.5rem;
-      background: #111;
-      border-left: 5px solid #58a6ff;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(88, 166, 255, 0.25);
-    }
-
-    .section h2 {
-      color: #58a6ff;
-      margin-bottom: 1rem;
-      font-size: 1.75rem;
-    }
-
-    .section p, .section li {
-      color: #ddd;
-      font-size: 1.05rem;
-    }
-
-    .section ul {
-      padding-left: 1.8rem;
-    }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    $1color: #fff;
-      border-radius: 8px;
-      padding: 0.8rem 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: #fff;
-      font-size: 1rem;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
-    }
-
-    .tech-item i {
-      color: #58a6ff;
-      font-size: 1.2rem;
-    }
-
-    a {
-      color: #58a6ff;
-    }
-
-    
-
-    .say-hi-btn:hover {
-      background-color: #1f6feb;
-      color: #fff;
-    }
-
-    footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 2rem;
-  font-size: 1rem;
-  color: #666;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn ease-in 1;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #58a6ff;
-  color: #000;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 999;
-}
-
-.light-mode {
-  background-color: #f5f5f5;
-  color: #111;
-}
-  .tech-item:hover {
-      background-color: #222;
-      transform: scale(1.05);
-    }
-
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omkar Urankar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
   <button class="dark-mode-toggle" onclick="toggleMode()">🌓 Toggle Theme</button>
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.tech-item').forEach((el, i) => {
-        el.classList.add('fade-in');
-        el.style.animationDelay = `${i * 0.1}s`;
-      });
-    });
-  </script>
 
   <header>
-    <img src="omkar.jpg" alt="Omkar Urankar" class="profile-pic" />
+    <img src="assets/omkar.jpg" alt="Omkar Urankar" class="profile-pic">
     <h1>Omkar Urankar</h1>
     <p class="subtitle">Cloud Consultant | Azure | Terraform | Linux | GCP</p>
     <nav>
@@ -165,16 +19,14 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#awards">Awards</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="about" class="section">
     <h2>👨‍💻 About Me</h2>
-    <p>
-      Cloud Consultant with 5+ years of experience across Azure, GCP, and AWS. I specialize in designing scalable infrastructure, automating deployments with Terraform, and managing system health using Update Manager, ASR, and scripting.
-    </p>
+    <p>Cloud Consultant with 5+ years of experience across Azure, GCP, and AWS. I specialize in designing scalable infrastructure, automating deployments with Terraform, and managing system health using Update Manager, ASR, and scripting.</p>
   </section>
 
   <section id="skills" class="section">
@@ -195,40 +47,29 @@
   <section id="projects" class="section">
     <h2>🚀 Projects</h2>
     <ul>
-      <li><strong>Azure Infra Automation:</strong> Deploys full-stack VMs with NSGs, Bastion, and Key Vaults using Terraform.</li>
-      <li><strong>Orphaned Resource Reporter:</strong> Logic App and Runbook to fetch unused Azure resources using KQL and email them.</li>
-      <li><strong>Update Manager Healthcheck:</strong> Azure Automation Runbook validating VM uptime, service state, and agent presence.</li>
+      <li><strong>Azure Infra Automation:</strong> Full-stack VM deployment using Terraform.</li>
+      <li><strong>Orphaned Resource Reporter:</strong> KQL + Logic App + Runbook.</li>
+      <li><strong>Healthcheck Post-Patching:</strong> Azure Automation for VM validation.</li>
     </ul>
   </section>
 
-  $1
+  <section id="experience" class="section">
+    <h2>💼 Experience</h2>
+    <p><strong>Infogain:</strong> Azure Infra Mgmt, Patching, DR for 20+ customers.</p>
+    <p><strong>Capgemini:</strong> Windows Server and McD UK L2 Support.</p>
+    <p><strong>Wipro:</strong> BT Network Activation & SIP Services.</p>
   </section>
 
-<section id="certifications" class="section">
-  <h2>🎓 Certifications</h2>
-  <div class="tech-stack">
-    <div class="tech-item" title="Microsoft Azure Administrator Associate">
-      <img src="https://img.icons8.com/color/48/000000/azure-1.png" width="24" height="24" alt="Azure Icon"/>
-      Azure Admin Associate
+  <section id="certifications" class="section">
+    <h2>🎓 Certifications</h2>
+    <div class="tech-stack">
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/000000/azure-1.png" alt="Azure"/> Azure Admin Associate</div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP"/> GCP ACE</div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS"/> AWS CCP</div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/000000/red-hat.png" alt="Red Hat"/> RHCSA</div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google"/> Google Support</div>
     </div>
-    <div class="tech-item" title="GCP Associate Cloud Engineer">
-      <img src="https://img.icons8.com/color/48/000000/google-cloud.png" width="24" height="24" alt="GCP Icon"/>
-      GCP ACE
-    </div>
-    <div class="tech-item" title="AWS Certified Cloud Practitioner">
-      <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" width="24" height="24" alt="AWS Icon"/>
-      AWS CCP
-    </div>
-    <div class="tech-item" title="Red Hat Certified System Administrator">
-      <img src="https://img.icons8.com/color/48/000000/red-hat.png" width="24" height="24" alt="Red Hat Icon"/>
-      RHCSA
-    </div>
-    <div class="tech-item" title="Google Technical Support Fundamentals">
-      <img src="https://img.icons8.com/color/48/000000/google-logo.png" width="24" height="24" alt="Google Icon"/>
-      Google Support
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="contact" class="section">
     <h2>📫 Contact</h2>
@@ -236,12 +77,23 @@
     <p>Phone: <a href="tel:+919623880361">+91 9623880361</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/omkar-urankar" target="_blank">omkar-urankar</a></p>
     <p><a href="Omkar_Urankar_Resume.pdf" download>📄 Download Resume</a></p>
-    
   </section>
 
   <footer>
     &copy; 2025 Omkar Urankar — <em>Blessed to begin this journey with you.</em>
   </footer>
 
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tech-item').forEach((el, i) => {
+        el.classList.add('fade-in');
+        el.style.animationDelay = `${i * 0.1}s`;
+      });
+    });
+  </script>
 </body>
 </html>
