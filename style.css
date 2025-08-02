@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #58a6ff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px #58a6ff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #58a6ff;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #58a6ff;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
