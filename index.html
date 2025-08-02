@@ -1,35 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Omkar Urankar | Cloud Consultant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #000;
-      color: #fff;
-      line-height: 1.7;
-    }
-
-    header {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-    }
-
-    .profile-pic {
+.profile-pic {
       width: 180px;
-      height: 230px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 50% / 60%;
+      border-radius: 50%;
       border: 6px solid #58a6ff;
       box-shadow: 0 0 25px #58a6ff;
       margin-bottom: 1.5rem;
@@ -95,8 +68,7 @@
       margin-top: 1rem;
     }
 
-    .tech-item {
-      background-color: #1a1a1a;
+    $1color: #fff;
       border-radius: 8px;
       padding: 0.8rem 1.2rem;
       display: flex;
@@ -116,19 +88,7 @@
       color: #58a6ff;
     }
 
-    .say-hi-btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.8rem;
-      background-color: #58a6ff;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+    
 
     .say-hi-btn:hover {
       background-color: #1f6feb;
@@ -142,14 +102,19 @@
       font-size: 1rem;
       color: #666;
     }
-  </style>
+  .tech-item:hover {
+      background-color: #222;
+      transform: scale(1.05);
+    }
+
+    
 </head>
 <body>
 
   <header>
-    <img src="omkar.jpg" alt="Omkar Urankar" class="profile-pic" />
+    <img src="assets/omkar.jpg" alt="Omkar Urankar" class="profile-pic" />
     <h1>Omkar Urankar</h1>
-    <p class="subtitle">Cloud Consultant | Azure | Terraform | Windows | Linux | AWS</p>
+    <p class="subtitle">Cloud Consultant | Azure | Terraform | Linux | GCP</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -163,7 +128,7 @@
   <section id="about" class="section">
     <h2>👨‍💻 About Me</h2>
     <p>
-      Cloud Consultant with 5+ years of experience in technologies like Azure, AWS, Windows, Linux and Terraform. I specialize in designing scalable infrastructure, automating deployments with Terraform,Powershell & ARM Templates.
+      Cloud Consultant with 5+ years of experience across Azure, GCP, and AWS. I specialize in designing scalable infrastructure, automating deployments with Terraform, and managing system health using Update Manager, ASR, and scripting.
     </p>
   </section>
 
@@ -204,14 +169,19 @@
     </p>
   </section>
 
-  <section id="awards" class="section">
-    <h2>🏆 Achievements & Awards</h2>
-    <ul>
-      <li>🏅 <strong>Star of the Month</strong> – Infogain (April 2025)</li>
-      <li>🏅 <strong>Spot Award</strong> – Infogain (Jan & Nov 2023)</li>
-      <li>🌟 <strong>Rising Star</strong> – Wipro (Dec 2019)</li>
-    </ul>
+  $1
   </section>
+
+<section id="certifications" class="section">
+  <h2>🎓 Certifications</h2>
+  <div class="tech-stack">
+    <div class="tech-item" title="Microsoft Azure Administrator Associate"><i class="fab fa-microsoft"></i> Azure Admin Associate</div>
+    <div class="tech-item" title="GCP Associate Cloud Engineer"><i class="fab fa-google"></i> GCP ACE</div>
+    <div class="tech-item" title="AWS Certified Cloud Practitioner"><i class="fab fa-aws"></i> AWS CCP</div>
+    <div class="tech-item" title="Red Hat Certified System Administrator"><i class="fas fa-server"></i> RHCSA</div>
+    <div class="tech-item" title="Google Technical Support Fundamentals"><i class="fas fa-graduation-cap"></i> Google Support</div>
+  </div>
+</section>
 
   <section id="contact" class="section">
     <h2>📫 Contact</h2>
@@ -219,7 +189,7 @@
     <p>Phone: <a href="tel:+919623880361">+91 9623880361</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/omkar-urankar" target="_blank">omkar-urankar</a></p>
     <p><a href="Omkar_Urankar_Resume.pdf" download>📄 Download Resume</a></p>
-    <a class="say-hi-btn" href="mailto:omkarurankar96@gmail.com?subject=Say%20Hi%20from%20GitHub%20Portfolio">👋 Say Hi</a>
+    
   </section>
 
   <footer>
