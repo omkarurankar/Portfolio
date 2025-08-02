@@ -4,11 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omkar Urankar | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #58a6ff;
+      box-shadow: 0 0 25px #58a6ff;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      color: #58a6ff;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-top: 0.7rem;
+    }
+
+    nav {
+      margin: 2rem 0 3rem;
+    }
+
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      background: #111;
+      border-left: 5px solid #58a6ff;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(88, 166, 255, 0.25);
+    }
+
+    .section h2 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+
+    .section p, .section li {
+      color: #ddd;
+      font-size: 1.05rem;
+    }
+
+    .section ul {
+      padding-left: 1.8rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .tech-item {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: #fff;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .tech-item img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .tech-item i {
+      color: #58a6ff;
+      font-size: 1.2rem;
+    }
+
+    .tech-item:hover {
+      background-color: #222;
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <button class="dark-mode-toggle" onclick="toggleMode()">🌓 Toggle Theme</button>
 
   <header>
     <img src="omkar.jpg" alt="Omkar Urankar" class="profile-pic">
@@ -18,7 +144,6 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -53,13 +178,6 @@
     </ul>
   </section>
 
-  <section id="experience" class="section">
-    <h2>💼 Experience</h2>
-    <p><strong>Infogain:</strong> Azure Infra Mgmt, Patching, DR for 20+ customers.</p>
-    <p><strong>Capgemini:</strong> Windows Server and McD UK L2 Support.</p>
-    <p><strong>Wipro:</strong> BT Network Activation & SIP Services.</p>
-  </section>
-
   <section id="certifications" class="section">
     <h2>🎓 Certifications</h2>
     <div class="tech-stack">
@@ -83,17 +201,5 @@
     &copy; 2025 Omkar Urankar — <em>Blessed to begin this journey with you.</em>
   </footer>
 
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.tech-item').forEach((el, i) => {
-        el.classList.add('fade-in');
-        el.style.animationDelay = `${i * 0.1}s`;
-      });
-    });
-  </script>
 </body>
 </html>
