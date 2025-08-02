@@ -96,12 +96,43 @@
     }
 
     footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 2rem;
-      font-size: 1rem;
-      color: #666;
-    }
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #58a6ff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.light-mode {
+  background-color: #f5f5f5;
+  color: #111;
+}
   .tech-item:hover {
       background-color: #222;
       transform: scale(1.05);
@@ -110,6 +141,20 @@
     
 </head>
 <body>
+
+  <button class="dark-mode-toggle" onclick="toggleMode()">🌓 Toggle Theme</button>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tech-item').forEach((el, i) => {
+        el.classList.add('fade-in');
+        el.style.animationDelay = `${i * 0.1}s`;
+      });
+    });
+  </script>
 
   <header>
     <img src="omkar.jpg" alt="Omkar Urankar" class="profile-pic" />
@@ -156,30 +201,32 @@
     </ul>
   </section>
 
-  <section id="experience" class="section">
-    <h2>💼 Experience</h2>
-    <p>
-      <strong>Infogain (2021 - Present):</strong> Managing Azure infrastructure for 20+ customers, automating deployments, patching, and disaster recovery setups.
-    </p>
-    <p>
-      <strong>Capgemini (2020 - 2021):</strong> L2 support for McDonald's UK POS systems and Windows Server management.
-    </p>
-    <p>
-      <strong>Wipro (2019 - 2020):</strong> Service delivery and support for British Telecom SIP and network activations.
-    </p>
-  </section>
-
   $1
   </section>
 
 <section id="certifications" class="section">
   <h2>🎓 Certifications</h2>
   <div class="tech-stack">
-    <div class="tech-item" title="Microsoft Azure Administrator Associate"><i class="fab fa-microsoft"></i> Azure Admin Associate</div>
-    <div class="tech-item" title="GCP Associate Cloud Engineer"><i class="fab fa-google"></i> GCP ACE</div>
-    <div class="tech-item" title="AWS Certified Cloud Practitioner"><i class="fab fa-aws"></i> AWS CCP</div>
-    <div class="tech-item" title="Red Hat Certified System Administrator"><i class="fas fa-server"></i> RHCSA</div>
-    <div class="tech-item" title="Google Technical Support Fundamentals"><i class="fas fa-graduation-cap"></i> Google Support</div>
+    <div class="tech-item" title="Microsoft Azure Administrator Associate">
+      <img src="https://img.icons8.com/color/48/000000/azure-1.png" width="24" height="24" alt="Azure Icon"/>
+      Azure Admin Associate
+    </div>
+    <div class="tech-item" title="GCP Associate Cloud Engineer">
+      <img src="https://img.icons8.com/color/48/000000/google-cloud.png" width="24" height="24" alt="GCP Icon"/>
+      GCP ACE
+    </div>
+    <div class="tech-item" title="AWS Certified Cloud Practitioner">
+      <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" width="24" height="24" alt="AWS Icon"/>
+      AWS CCP
+    </div>
+    <div class="tech-item" title="Red Hat Certified System Administrator">
+      <img src="https://img.icons8.com/color/48/000000/red-hat.png" width="24" height="24" alt="Red Hat Icon"/>
+      RHCSA
+    </div>
+    <div class="tech-item" title="Google Technical Support Fundamentals">
+      <img src="https://img.icons8.com/color/48/000000/google-logo.png" width="24" height="24" alt="Google Icon"/>
+      Google Support
+    </div>
   </div>
 </section>
 
